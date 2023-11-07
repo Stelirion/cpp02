@@ -14,6 +14,11 @@ Fixed::Fixed(const Fixed &fixed) {
     *this = fixed;
 }
 
+Fixed::Fixed(const int fixed) {
+    std::cout << "int constructor called" << std::endl;
+    this->_number = fixed;
+}
+
 Fixed& Fixed::operator=(const Fixed &fixed) {
     std::cout << "Assignation operator called" << std::endl;
     this->_number = fixed.getRawBits();
